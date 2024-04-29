@@ -4,9 +4,18 @@
 
 #include <iostream>
 
+int a, b = 5;
+
 int main(){
-    std::cout << "Hi There!" << std::endl;
+    bool my_flag = false;
+    a = 7;
+    std::cout << "a = " << a << std::endl;
+    std::cout << "b = " << b << std::endl;
+    std::cout << "flag = " << my_flag << std::endl;
+    std::cout << "a + b = " << a + b << std::endl;
+    unsigned int positive;
     
+
     std::cout << std::endl << std::endl;
     return (0);
 }
