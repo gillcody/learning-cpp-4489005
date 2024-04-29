@@ -4,8 +4,9 @@
 
 #include <iostream>
 
-int main() {
+int main(){
+    std::cout << "Hi There!" << std::endl;
 
-
-    return 1;
+    std::cout << std::endl <<std::endl;
+    return 0;
 }
