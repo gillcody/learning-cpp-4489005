@@ -26,6 +26,34 @@ int main(){
 
     // Calculate the GPA for the selected student.
     // Write your code here
+    float points = 0.0f, credits = 0.0f;
+    for (auto grd : grades) {
+        if (grd.get_student_id() == id) {
+            float num_grade;
+            switch (grd.get_grade()) {
+                case 'A': num_grade = 4.0f;
+                    break;
+                case 'B': num_grade = 3.0f;
+                    break;
+                case 'C': num_grade = 2.0f;
+                    break;
+                case 'D': num_grade = 1.0f;
+                    break;
+                default: num_grade = 0.0f;
+                    break;
+            };
+        
+            int j = 0;
+            while (j < courses.size() && courses[j].get_id() != grd.get_course_id()) {
+                j++;
+            }
+            credits += courses[j].get_credits();
+            points += num_grade * courses[j].get_credits();
+        }
+    }
+
+    GPA = points / credits;
+
 
     std::string student_str;
     student_str = students[0].get_name(); // Change this to the selected student's name
