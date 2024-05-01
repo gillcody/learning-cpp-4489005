@@ -84,7 +84,3 @@ unsigned char StudentRecords::get_course_credits(int cid) const{
                 j++;
             return courses[j].get_credits();
 }
-
-float StudentRecords::get_GPA(int sid) const{
-
-}
